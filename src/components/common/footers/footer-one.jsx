@@ -118,31 +118,6 @@ class FooterOne extends Component {
         let tap_to_top = {display: 'none'}
         return (
             <footer className="footer-light">
-                <div className="light-layout">
-                    <div className="container">
-                        <section className="small-section border-section border-top-0">
-                            <div className="row">
-                                <div className="col-lg-6">
-                                    <div className="subscribe">
-                                        <div>
-                                            <h4>KNOW IT ALL FIRST!</h4>
-                                            <p>Never Miss Anything From Multikart By Signing Up To Our Newsletter. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6">
-                                    <form className="form-inline subscribe-form">
-                                        <div className="form-group mx-sm-3">
-                                            <input type="text" className="form-control" id="exampleFormControlInput1"
-                                                   placeholder="Enter your email"/>
-                                        </div>
-                                        <button type="submit" className="btn btn-solid">subscribe</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
                 <section className="section-b-space light-layout">
                     <div className="container">
                         <div className="row footer-theme partition-f">
@@ -154,8 +129,7 @@ class FooterOne extends Component {
                                     <div className="footer-logo">
                                         <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} ><img src={`${process.env.PUBLIC_URL}/assets/images/icon/logo.png`} alt="" /></Link>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                                    <p>Artishop est un site internet permettant à des artisans belges d’avoir une visibilité sur internet.</p>
                                     <div className="footer-social">
                                         <ul>
                                             <li>
@@ -234,8 +208,7 @@ class FooterOne extends Component {
                         <div className="row">
                             <div className="col-xl-6 col-md-6 col-sm-12">
                                 <div className="footer-end">
-                                    <p><i className="fa fa-copyright" aria-hidden="true"></i> 2018-19 themeforest
-                                        powered by pixelstrap</p>
+                                    <p><i className="fa fa-copyright" aria-hidden="true"></i> 2019 Artishop - Powered by IPL</p>
                                 </div>
                             </div>
                             <div className="col-xl-6 col-md-6 col-sm-12">
@@ -246,9 +219,6 @@ class FooterOne extends Component {
                                         </li>
                                         <li>
                                             <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/mastercard.png`} alt="" /></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/paypal.png`} alt="" /></a>
                                         </li>
                                         <li>
                                             <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/american-express.png`} alt="" /></a>

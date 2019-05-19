@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link, NavLink} from 'react-router-dom';
-import { IntlActions } from 'react-redux-multilingual'
 import Pace from 'react-pace-progress'
 
 // Import custom components
@@ -41,11 +40,6 @@ class HeaderOne extends Component {
         }
     }
 
-    changeLanguage(lang) {
-        store.dispatch(IntlActions.setLocale(lang))
-		localStorage.setItem('locale-lang', lang)
-	}
-
     openNav() {
         var openmyslide = document.getElementById("mySidenav");
         if(openmyslide){
@@ -82,13 +76,6 @@ class HeaderOne extends Component {
 			            <div className="col-sm-12">
 			                <div className="main-menu">
 			                    <div className="menu-left">
-			                        <div className="navbar">
-			                            <a href="javascript:void(0)" onClick={this.openNav}>
-			                                <div className="bar-style"> <i className="fa fa-bars sidebar-bar" aria-hidden="true"></i></div>
-			                            </a>
-										{/*SideBar Navigation Component*/}
-										<SideBar/>
-			                        </div>
 			                        <div className="brand-logo">
                                         <Link to={`${process.env.PUBLIC_URL}/`}>
 											<img src={`${process.env.PUBLIC_URL}/assets/images/icon/logo.png`} className="img-fluid" alt="" />

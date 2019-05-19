@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import { withTranslate } from 'react-redux-multilingual'
 
 class TopBar extends Component {
 
     render() {
-        const {translate} = this.props;
         return (
             <div className="top-header">
                 <div className="container">
@@ -13,23 +11,21 @@ class TopBar extends Component {
                         <div className="col-lg-6">
                             <div className="header-contact">
                                 <ul>
-                                    <li>{translate('topbar_title', { theme_name: ' Multikart' })}</li>
-                                    <li><i className="fa fa-phone" aria-hidden="true"></i>{translate('call_us')}:  123 - 456 - 7890</li>
+                                    <li><i className="fa fa-phone" aria-hidden="true"></i>Contactez-nous :  <a href="call:+32 487 37 57 97">+32 487 37 57 97</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-lg-6 text-right">
                             <ul className="header-dropdown">
-                                <li className="mobile-wishlist compare-mobile"><Link to={`${process.env.PUBLIC_URL}/compare`}><i className="fa fa-random" aria-hidden="true"></i>{translate('compare')}</Link></li>
-                                <li className="mobile-wishlist"><Link to={`${process.env.PUBLIC_URL}/wishlist`}><i className="fa fa-heart" aria-hidden="true"></i>{translate('wishlist')}</Link></li>
+                                <li className="mobile-wishlist"><Link to={`${process.env.PUBLIC_URL}/wishlist`}><i className="fa fa-heart" aria-hidden="true"></i>Liste d'envies</Link></li>
                                 <li className="onhover-dropdown mobile-account">
-                                    <i className="fa fa-user" aria-hidden="true"></i> {translate('my_account')}
+                                    <i className="fa fa-user" aria-hidden="true"></i> Mon compte
                                     <ul className="onhover-show-div">
                                         <li>
-                                            <Link to={`${process.env.PUBLIC_URL}/pages/login`} data-lng="en">Login</Link>
+                                            <Link to={`${process.env.PUBLIC_URL}/pages/login`} data-lng="fr">Connexion</Link>
                                         </li>
                                         <li>
-                                            <Link to={`${process.env.PUBLIC_URL}/pages/register`} data-lng="en">Register</Link>
+                                            <Link to={`${process.env.PUBLIC_URL}/pages/register`} data-lng="fr">S'inscrire</Link>
                                         </li>
                                     </ul>
                                 </li>
@@ -43,4 +39,4 @@ class TopBar extends Component {
 }
 
 
-export default withTranslate(TopBar);
+export default TopBar;

@@ -13,9 +13,7 @@ class orderSuccess extends Component {
         const {payment, items, symbol, orderTotal} = this.props.location.state;
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         var current = new Date();
-        var next5days = new Date(Date.now() + 5 * 86400000);
         let CheckDate = current.toLocaleDateString("en-US", options).toString()
-        let deliveryDate = next5days.toLocaleDateString("en-US", options).toString()
 
         return (
             (payment)?
@@ -109,12 +107,6 @@ class orderSuccess extends Component {
                                         <h4>payment method</h4>
                                         <p>Pay on Delivery (Cash/Card). Cash on delivery (COD) available. Card/Net
                                             banking acceptance subject to device availability.</p>
-                                    </div>
-                                    <div className="col-md-12">
-                                        <div className="delivery-sec">
-                                            <h3>expected date of delivery</h3>
-                                            <h2>{deliveryDate}</h2>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux'
 
 import {getTopCollection} from '../../../services'
-import {addToCart, addToWishlist, addToCompare} from "../../../actions";
+import {addToCart, addToWishlist} from "../../../actions";
 import ProductItem from './product-item';
 
 class TopCollection extends Component {
@@ -42,7 +42,7 @@ class TopCollection extends Component {
             ]
         };
 
-        const {items, symbol, addToCart, addToWishlist, addToCompare} = this.props;
+        const {items, symbol, addToCart, addToWishlist} = this.props;
         return (
             <div>
                 {/*Paragraph*/}
@@ -59,7 +59,6 @@ class TopCollection extends Component {
                                     { items.map((product, index ) =>
                                         <div key={index}>
                                         <ProductItem product={product} symbol={symbol}
-                                                     onAddToCompareClicked={() => addToCompare(product)}
                                                      onAddToWishlistClicked={() => addToWishlist(product)}
                                                      onAddToCartClicked={() => addToCart(product, 1)} key={index} />
                                         </div>)
@@ -79,4 +78,4 @@ const mapStateToProps = (state) => ({
     symbol: state.data.symbol
 })
 
-export default connect(mapStateToProps, {addToCart, addToWishlist, addToCompare}) (TopCollection);
+export default connect(mapStateToProps, {addToCart, addToWishlist}) (TopCollection);

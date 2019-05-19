@@ -22,19 +22,19 @@ class Register extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12">
-                                <h3>create account</h3>
+                                <h3>Creer un compte</h3>
                                 <div className="theme-card">
                                     <form className="theme-form">
                                         <div className="form-row">
                                             <div className="col-md-6">
-                                                <label htmlFor="email">First Name</label>
+                                                <label htmlFor="email">Prénom</label>
                                                 <input type="text" className="form-control" id="fname"
-                                                       placeholder="First Name" required="" />
+                                                       placeholder="Prénom" required="" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label htmlFor="review">Last Name</label>
+                                                <label htmlFor="review">Nom</label>
                                                 <input type="password" className="form-control" id="lname"
-                                                       placeholder="Last Name" required="" />
+                                                       placeholder="Nom" required="" />
                                             </div>
                                         </div>
                                         <div className="form-row">
@@ -44,11 +44,11 @@ class Register extends Component {
                                                        placeholder="Email" required="" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label htmlFor="review">Password</label>
+                                                <label htmlFor="review">Mot de passe</label>
                                                 <input type="password" className="form-control" id="review"
-                                                       placeholder="Enter your password" required="" />
+                                                       placeholder="Mot de passe" required="" />
                                             </div>
-                                            <a href="#" className="btn btn-solid">create Account</a>
+                                            <a href="#" className="btn btn-solid">Creer un compte</a>
                                         </div>
                                     </form>
                                 </div>

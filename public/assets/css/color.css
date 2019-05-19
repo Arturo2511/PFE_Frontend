@@ -700,9 +700,9 @@ header {
     padding: 15px 25px;
     padding-right: 20px; }
     .top-header .header-dropdown li:first-child {
-      padding-right: 0; }
+      padding-right: 20px; }
     .top-header .header-dropdown li:nth-child(2) {
-      padding-right: 0; }
+      padding-right: 20px; }
     .top-header .header-dropdown li a {
       text-transform: capitalize;
       color: #999999; }

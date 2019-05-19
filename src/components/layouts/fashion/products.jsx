@@ -3,13 +3,13 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import {connect} from 'react-redux'
 
 import {getBestSeller, getMensWear, getWomensWear} from '../../../services'
-import {addToCart, addToWishlist, addToCompare} from "../../../actions";
+import {addToCart, addToWishlist} from "../../../actions";
 import ProductItem from './product-item';
 
 class SpecialProducts extends Component {
     render (){
 
-        const {bestSeller,mensWear,womensWear, symbol, addToCart, addToWishlist, addToCompare} = this.props
+        const {bestSeller,mensWear,womensWear, symbol, addToCart, addToWishlist} = this.props
         return (
             <div>
                 <div className="title1 section-t-space">
@@ -29,7 +29,6 @@ class SpecialProducts extends Component {
                                 <div className="no-slider row">
                                     { bestSeller.map((product, index ) =>
                                         <ProductItem product={product} symbol={symbol}
-                                                     onAddToCompareClicked={() => addToCompare(product)}
                                                      onAddToWishlistClicked={() => addToWishlist(product)}
                                                      onAddToCartClicked={() => addToCart(product, 1)} key={index} /> )
                                     }
@@ -39,7 +38,6 @@ class SpecialProducts extends Component {
                                 <div className="no-slider row">
                                     { mensWear.map((product, index ) =>
                                         <ProductItem product={product} symbol={symbol}
-                                                     onAddToCompareClicked={() => addToCompare(product)}
                                                      onAddToWishlistClicked={() => addToWishlist(product)}
                                                      onAddToCartClicked={() => addToCart(product, 1)} key={index} /> )
                                     }
@@ -49,7 +47,6 @@ class SpecialProducts extends Component {
                                 <div className=" no-slider row">
                                     { womensWear.map((product, index ) =>
                                         <ProductItem product={product} symbol={symbol}
-                                                     onAddToCompareClicked={() => addToCompare(product)}
                                                      onAddToWishlistClicked={() => addToWishlist(product)}
                                                      onAddToCartClicked={() => addToCart(product, 1)} key={index} /> )
                                     }
@@ -70,4 +67,4 @@ const mapStateToProps = (state) => ({
     symbol: state.data.symbol
 })
 
-export default connect(mapStateToProps, {addToCart, addToWishlist, addToCompare}) (SpecialProducts);
+export default connect(mapStateToProps, {addToCart, addToWishlist}) (SpecialProducts);

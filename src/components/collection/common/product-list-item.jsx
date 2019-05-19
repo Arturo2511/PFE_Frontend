@@ -48,7 +48,7 @@ class ProductListItem extends Component {
 
 
     render() {
-        const {product, symbol, onAddToCartClicked, onAddToWishlistClicked, onAddToCompareClicked} = this.props;
+        const {product, symbol, onAddToCartClicked, onAddToWishlistClicked} = this.props;
         const {open} = this.state;
 
             let RatingStars = []
@@ -77,8 +77,6 @@ class ProductListItem extends Component {
                                    data-target="#quick-view"
                                    title="Quick View"
                                    onClick={this.onOpenModal}><i className="fa fa-search" aria-hidden="true"></i></a>
-                                <Link to={`${process.env.PUBLIC_URL}/compare`} title="Compare" onClick={onAddToCompareClicked}>
-                                    <i className="fa fa-refresh" aria-hidden="true"></i></Link>
                             </div>
                             <ul className="product-thumb-list">
                                 {product.variants.map((vari, i) =>

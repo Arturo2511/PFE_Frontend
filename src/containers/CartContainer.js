@@ -18,17 +18,17 @@ const CartContainer = ({cartList, total, symbol, removeFromCart}) => (
                 <div>
             <li>
                 <div className="total">
-                    <h5>subtotal : <span>{symbol}{total}</span></h5>
+                    <h5>sous-total : <span>{symbol}{total}</span></h5>
                 </div>
             </li>
             <li>
                 <div className="buttons">
-                    <Link to={`${process.env.PUBLIC_URL}/cart`} className="view-cart">view cart</Link>
-                    <Link to={`${process.env.PUBLIC_URL}/checkout`} className="checkout">checkout</Link>
+                    <Link to={`${process.env.PUBLIC_URL}/cart`} className="view-cart">panier</Link>
+                    <Link to={`${process.env.PUBLIC_URL}/checkout`} className="checkout">payer</Link>
                 </div>
             </li></div>
                     :
-            <li><h5>Your cart is currently empty.</h5></li>}
+            <li><h5>Votre panier est vide.</h5></li>}
         </ul>
 
     </li>

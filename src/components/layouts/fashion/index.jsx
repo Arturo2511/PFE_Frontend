@@ -7,8 +7,6 @@ import {Link} from 'react-router-dom';
 import HeaderOne from '../../common/headers/header-one'
 import TopCollection from './collection';
 import SpecialProducts from "./products";
-import BlogSection from "./blogsection";
-import Instagram from "./instagram";
 import FooterOne from "../../common/footers/footer-one";
 
 class Fashion extends Component {
@@ -231,10 +229,6 @@ class Fashion extends Component {
                     </section>
                 </div>
                 {/*service layout end*/}
-
-                <BlogSection />
-
-                <Instagram />
 
                 {/*logo section*/}
                 <section className="section-b-space">

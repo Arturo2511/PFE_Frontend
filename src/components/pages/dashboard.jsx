@@ -37,7 +37,6 @@ class Dashboard extends Component {
                                             <li><a href="#">Address Book</a></li>
                                             <li><a href="#">My Orders</a></li>
                                             <li><a href="#">My Wishlist</a></li>
-                                            <li><a href="#">Newsletter</a></li>
                                             <li><a href="#">My Account</a></li>
                                             <li><a href="#">Change Password</a></li>
                                             <li className="last"><a href="#">Log Out</a></li>
@@ -72,19 +71,6 @@ class Dashboard extends Component {
                                                             <h6>MARK JECNO</h6>
                                                             <h6>MARk-JECNO@gmail.com</h6>
                                                             <h6><a href="#">Change Password</a></h6>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-sm-6">
-                                                    <div className="box">
-                                                        <div className="box-title">
-                                                            <h3>Newsletters</h3>
-                                                            <a href="#">Edit</a>
-                                                        </div>
-                                                        <div className="box-content">
-                                                            <p>
-                                                                You are currently not subscribed to any newsletter.
-                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>

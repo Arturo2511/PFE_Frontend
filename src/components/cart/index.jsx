@@ -29,10 +29,10 @@ class cartComponent extends Component {
                                     <thead>
                                     <tr className="table-head">
                                         <th scope="col">image</th>
-                                        <th scope="col">product name</th>
-                                        <th scope="col">price</th>
-                                        <th scope="col">quantity</th>
-                                        <th scope="col">action</th>
+                                        <th scope="col">article</th>
+                                        <th scope="col">prix</th>
+                                        <th scope="col">quantité</th>
+                                        <th scope="col">supprimer</th>
                                         <th scope="col">total</th>
                                     </tr>
                                     </thead>
@@ -108,7 +108,7 @@ class cartComponent extends Component {
                         </div>
                         <div className="row cart-buttons">
                             <div className="col-6">
-                                <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">continue shopping</Link>
+                                <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">continuer ses courses</Link>
                             </div>
                             <div className="col-6">
                                 <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid">check out</Link>
@@ -125,9 +125,8 @@ class cartComponent extends Component {
                                     <div className="col-sm-12 empty-cart-cls text-center">
                                         <img src={`${process.env.PUBLIC_URL}/assets/images/icon-empty-cart.png`} className="img-fluid mb-4" alt="" />
                                         <h3>
-                                            <strong>Your Cart is Empty</strong>
+                                            <strong>Votre panier est vide</strong>
                                         </h3>
-                                        <h4>Explore more shortlist some items.</h4>
                                     </div>
                                 </div>
                             </div>

@@ -4,13 +4,13 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom'
 
 import {getBestSeller} from "../../services";
-import {addToCart, addToWishlist, addToCompare} from "../../actions";
+import {addToCart, addToWishlist} from "../../actions";
 import ProductItem from '../layouts/fashion/product-item';
 
 
 class RelatedProduct extends Component {
     render (){
-        const {items, symbol, addToCart, addToWishlist, addToCompare} = this.props;
+        const {items, symbol, addToCart, addToWishlist} = this.props;
 
 
         return (
@@ -25,7 +25,6 @@ class RelatedProduct extends Component {
                         { items.slice(0, 6).map((product, index ) =>
                             <div key={index} className="col-xl-2 col-md-4 col-sm-6">
                                 <ProductItem product={product} symbol={symbol}
-                                             onAddToCompareClicked={() => addToCompare(product)}
                                              onAddToWishlistClicked={() => addToWishlist(product)}
                                              onAddToCartClicked={() => addToCart(product, 1)} key={index} />
                             </div>)
@@ -44,4 +43,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {addToCart, addToWishlist, addToCompare})(RelatedProduct);
+export default connect(mapStateToProps, {addToCart, addToWishlist})(RelatedProduct);

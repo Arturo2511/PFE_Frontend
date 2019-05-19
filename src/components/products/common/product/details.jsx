@@ -58,9 +58,6 @@ class Details extends Component {
                                     <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/mastercard.png`} alt="" /></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/paypal.png`} alt="" /></a>
-                                </li>
-                                <li>
                                     <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/american-express.png`} alt="" /></a>
                                 </li>
                                 <li>
