@@ -36,7 +36,6 @@ class Dashboard extends Component {
                                             <li className="active"><a href='#'>Account Info</a></li>
                                             <li><a href="#">Address Book</a></li>
                                             <li><a href="#">My Orders</a></li>
-                                            <li><a href="#">My Wishlist</a></li>
                                             <li><a href="#">My Account</a></li>
                                             <li><a href="#">Change Password</a></li>
                                             <li className="last"><a href="#">Log Out</a></li>

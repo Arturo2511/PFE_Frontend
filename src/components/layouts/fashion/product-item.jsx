@@ -46,12 +46,8 @@ class ProductItem extends Component {
     }
 
     render() {
-        const {product, symbol, onAddToCartClicked, onAddToWishlistClicked} = this.props;
+        const {product, symbol, onAddToCartClicked} = this.props;
 
-        let RatingStars = []
-        for(var i = 0; i < product.rating; i++) {
-            RatingStars.push(<i className="fa fa-star" key={i}></i>)
-        }
         return (
                 <div className="product-box">
                     <div className="img-wrapper">
@@ -70,9 +66,6 @@ class ProductItem extends Component {
                             <button title="Add to cart" onClick={onAddToCartClicked}>
                                 <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                             </button>
-                            <a href="javascript:void(0)" title="Add to Wishlist" onClick={onAddToWishlistClicked}>
-                                <i className="fa fa-heart" aria-hidden="true"></i>
-                            </a>
                             <a href="#" data-toggle="modal"
                                data-target="#quick-view"
                                title="Quick View"
@@ -91,21 +84,12 @@ class ProductItem extends Component {
                     </div>
                     <div className="product-detail">
                         <div>
-                            <div className="rating">
-                                {RatingStars}
-                            </div>
                             <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`}>
                                 <h6>{product.name}</h6>
                             </Link>
                             <h4>{symbol}{(product.price*product.discount/100)}
                                 <del><span className="money">{symbol}{product.price}</span></del>
                             </h4>
-                            <ul className="color-variant">
-                                {product.variants.map((vari, i) => {
-                                    return (
-                                        <li className={vari.color} key={i} title={vari.color} onClick={() => this.onClickHandle(vari.images)}></li>)
-                                })}
-                            </ul>
                         </div>
                     </div>
                     <Modal open={this.state.open} onClose={this.onCloseModal} center>
@@ -122,23 +106,11 @@ class ProductItem extends Component {
                                             <div className="product-right">
                                                 <h2> {product.name} </h2>
                                                 <h3>{symbol}{product.price}</h3>
-                                                <ul className="color-variant">
-                                                    {product.variants.map((vari, i) =>
-                                                        <li className={vari.color} key={i} title={vari.color} onClick={() => this.onClickHandle(vari.images)}></li>)
-                                                    }
-                                                </ul>
                                                 <div className="border-product">
                                                     <h6 className="product-title">product details</h6>
                                                     <p>{product.shortDetails}</p>
                                                 </div>
                                                 <div className="product-description border-product">
-                                                    <div className="size-box">
-                                                        <ul>
-                                                            {product.size.map((size, i) => {
-                                                                return <li key={i}><a href="#">{size}</a></li>
-                                                            })}
-                                                        </ul>
-                                                    </div>
                                                     <h6 className="product-title">quantity</h6>
                                                     <div className="qty-box">
                                                         <div className="input-group">

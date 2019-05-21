@@ -17,7 +17,7 @@ class NewProduct extends Component {
 
         return (
             <div className="theme-card">
-                <h5 className="title-border">new product</h5>
+                <h5 className="title-border">Autres articles</h5>
                 <Slider className="offer-slider slide-1">
                     {arrays.map((products, index) =>
                         <div key={index}>
@@ -25,16 +25,8 @@ class NewProduct extends Component {
                                 <div className="media" key={i}>
                                     <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`}><img className="img-fluid" src={`${product.variants[0].images}`} alt="" /></Link>
                                     <div className="media-body align-self-center">
-                                        <div className="rating">
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                            <i className="fa fa-star"></i>
-                                        </div>
                                         <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`}><h6>{product.name}</h6></Link>
-                                        <h4>{symbol}{(product.price*product.discount/100)}
-                                            <del><span className="money">{symbol}{product.price}</span></del></h4>
+                                        <h4>{product.price}{symbol}</h4>
                                     </div>
                                 </div>
                             )}

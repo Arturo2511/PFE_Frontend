@@ -5,12 +5,11 @@ import {connect} from "react-redux";
 
 
 // import custom Components
-import Service from "./common/service";
 import NewProduct from "../common/new-product";
 import Breadcrumb from "../common/breadcrumb";
 import DetailsWithPrice from "./common/product/details-price";
 import DetailsTopTabs from "./common/details-top-tabs";
-import { addToCart, addToCartUnsafe, addToWishlist } from '../../actions'
+import { addToCart, addToCartUnsafe } from '../../actions'
 import ImageZoom from './common/product/image-zoom'
 import SmallImages from './common/product/small-image'
 
@@ -35,7 +34,7 @@ class Vertical extends Component {
     }
 
     render(){
-        const {symbol, item, addToCart, addToCartUnsafe, addToWishlist} = this.props
+        const {symbol, item, addToCart, addToCartUnsafe} = this.props
         var products = {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -54,7 +53,7 @@ class Vertical extends Component {
         return (
             <div>
 
-                <Breadcrumb  title={'Product / '+item.name} />
+                <Breadcrumb  title={'Produit / '+item.name} />
 
                 {/*Section Start*/}
                 {(item)?
@@ -64,7 +63,6 @@ class Vertical extends Component {
                             <div className="row">
                                 <div className="col-sm-3 collection-filter">
                                     {/* <BrandBlock/> */}
-                                    <Service/>
                                     {/*side-bar single product slider start*/}
                                     <NewProduct/>
                                     {/*side-bar single product slider end*/}
@@ -90,7 +88,7 @@ class Vertical extends Component {
                                                 </Slider>
                                                 <SmallImages item={item} settings={productsnav} navOne={this.state.nav1} />
                                             </div>
-                                            <DetailsWithPrice symbol={symbol} item={item} navOne={this.state.nav1} addToCartClicked={addToCart} BuynowClicked={addToCartUnsafe} addToWishlistClicked={addToWishlist} />
+                                            <DetailsWithPrice symbol={symbol} item={item} navOne={this.state.nav1} addToCartClicked={addToCart} BuynowClicked={addToCartUnsafe} />
                                         </div>
                                     </div>
                                     <DetailsTopTabs item={item} />
@@ -114,4 +112,4 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps, {addToCart, addToCartUnsafe, addToWishlist}) (Vertical);
+export default connect(mapStateToProps, {addToCart, addToCartUnsafe}) (Vertical);

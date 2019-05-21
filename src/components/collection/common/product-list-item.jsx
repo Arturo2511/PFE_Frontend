@@ -48,13 +48,8 @@ class ProductListItem extends Component {
 
 
     render() {
-        const {product, symbol, onAddToCartClicked, onAddToWishlistClicked} = this.props;
+        const {product, symbol, onAddToCartClicked} = this.props;
         const {open} = this.state;
-
-            let RatingStars = []
-            for(var i = 0; i < product.rating; i++) {
-                RatingStars.push(<i className="fa fa-star" key={i}></i>)
-            }
 
         return (
                 <div className="col-xl-3 col-md-6 col-grid-box">
@@ -70,9 +65,6 @@ class ProductListItem extends Component {
                                 <button title="Add to cart" onClick={() => onAddToCartClicked(product, 1)}>
                                     <i className="fa fa-shopping-cart" aria-hidden="true"></i>
                                 </button>
-                                <a href="javascript:void(0)" title="Add to Wishlist" onClick={onAddToWishlistClicked} >
-                                    <i className="fa fa-heart" aria-hidden="true"></i>
-                                </a>
                                 <a href="#" data-toggle="modal"
                                    data-target="#quick-view"
                                    title="Quick View"
@@ -91,9 +83,6 @@ class ProductListItem extends Component {
                         </div>
                         <div className="product-detail">
                             <div>
-                                <div className="rating">
-                                    {RatingStars}
-                                </div>
                                 <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${product.id}`}>
                                     <h6>{product.name}</h6>
                                 </Link>

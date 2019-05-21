@@ -26,7 +26,6 @@ import Vertical from "./components/products/vertical";
 // Features
 import Layout from './components/app'
 import Cart from './components/cart'
-import wishList from './components/wishlist'
 import checkOut from './components/checkout'
 import orderSuccess from './components/checkout/success-page'
 
@@ -72,7 +71,6 @@ class Root extends React.Component {
 
 								{/*Routes For custom Features*/}
 								<Route path={`${process.env.PUBLIC_URL}/cart`} component={Cart}/>
-								<Route path={`${process.env.PUBLIC_URL}/wishlist`} component={wishList}/>
 								<Route path={`${process.env.PUBLIC_URL}/checkout`} component={checkOut}/>
 								<Route path={`${process.env.PUBLIC_URL}/order-success`} component={orderSuccess}/>
 

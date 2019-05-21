@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 class Details extends Component {
 
     render (){
-        const {item, addToWishlistClicked} = this.props
+        const {item} = this.props
 
         return (
             <div className="col-lg-4">
@@ -42,9 +42,6 @@ class Details extends Component {
                                 <li><a href="https://twitter.com/" target="_blank"><i className="fa fa-twitter"></i></a></li>
                                 <li><a href="https://www.instagram.com/" target="_blank"><i className="fa fa-instagram"></i></a></li>
                             </ul>
-                                <button className="wishlist-btn" onClick={() => addToWishlistClicked(item)}>
-                                    <i className="fa fa-heart"></i><span className="title-font">Add To WishList</span>
-                                </button>
                         </div>
                     </div>
                     <div className="border-product">

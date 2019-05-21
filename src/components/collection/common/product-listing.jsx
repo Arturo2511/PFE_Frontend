@@ -5,7 +5,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 
 import { getTotal, getCartProducts } from '../../../reducers'
-import { addToCart, addToWishlist } from '../../../actions'
+import { addToCart } from '../../../actions'
 import {getVisibleproducts} from '../../../services';
 import ProductListItem from "./product-list-item";
 
@@ -38,7 +38,7 @@ class ProductListing extends Component {
     }
 
     render (){
-        const {products, addToCart, symbol, addToWishlist} = this.props;
+        const {products, addToCart, symbol} = this.props;
 
         return (
             <div>
@@ -59,7 +59,6 @@ class ProductListing extends Component {
                                 <div className="row">
                                     { products.slice(0, this.state.limit).map((product, index) =>
                                         <ProductListItem product={product} symbol={symbol}
-                                                         onAddToWishlistClicked={() => addToWishlist(product)}
                                                          onAddToCartClicked={addToCart} key={index}/>)
                                     }
                                 </div>
@@ -87,5 +86,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
     mapStateToProps,
-    {addToCart, addToWishlist}
+    {addToCart}
 )(ProductListing)

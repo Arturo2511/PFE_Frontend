@@ -18,7 +18,7 @@ class cartComponent extends Component {
         const {cartItems, symbol, total} = this.props;
         return (
             <div>
-                <Breadcrumb title={'Cart Page'}/>
+                <Breadcrumb title={'Panier'}/>
 
                 {cartItems.length>0 ?
                 <section className="cart-section section-b-space">
@@ -99,7 +99,7 @@ class cartComponent extends Component {
                                 <table className="table cart-table table-responsive-md">
                                     <tfoot>
                                     <tr>
-                                        <td>total price :</td>
+                                        <td>prix total :</td>
                                         <td><h2>{symbol} {total} </h2></td>
                                     </tr>
                                     </tfoot>
@@ -108,10 +108,10 @@ class cartComponent extends Component {
                         </div>
                         <div className="row cart-buttons">
                             <div className="col-6">
-                                <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">continuer ses courses</Link>
+                                <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">continuer mes achats</Link>
                             </div>
                             <div className="col-6">
-                                <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid">check out</Link>
+                                <Link to={`${process.env.PUBLIC_URL}/checkout`} className="btn btn-solid">passer à la caisse</Link>
                             </div>
                         </div>
                     </div>

@@ -9,7 +9,7 @@ import RelatedProduct from "../common/related-product"
 import Breadcrumb from "../common/breadcrumb";
 import Price from "./common/product/price";
 import DetailsTopTabs from "./common/details-top-tabs";
-import {addToCart, addToCartUnsafe, addToWishlist } from '../../actions'
+import {addToCart, addToCartUnsafe } from '../../actions'
 import ImageZoom from './common/product/image-zoom'
 import SmallImages from './common/product/small-image'
 
@@ -35,7 +35,7 @@ class Column extends Component {
     }
 
     render(){
-        const {symbol, item, addToCart, addToCartUnsafe, addToWishlist} = this.props
+        const {symbol, item, addToCart, addToCartUnsafe} = this.props
         var products = {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -76,24 +76,6 @@ class Column extends Component {
                                     <div className="col-lg-4">
                                         <div className="product-right product-description-box">
                                             <h2> {item.name} </h2>
-                                            <div className="rating three-star  mb-2">
-                                                <i className="fa fa-star"></i>
-                                                <i className="fa fa-star"></i>
-                                                <i className="fa fa-star"></i>
-                                                <i className="fa fa-star"></i>
-                                                <i className="fa fa-star"></i>
-                                            </div>
-                                            <div className="product-icon mb-3">
-                                                <ul className="product-social">
-                                                    <li><a href="https://www.facebook.com/" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                                                    <li><a href="https://plus.google.com/discover" target="_blank"><i className="fa fa-google-plus"></i></a></li>
-                                                    <li><a href="https://twitter.com/" target="_blank"><i className="fa fa-twitter"></i></a></li>
-                                                    <li><a href="https://www.instagram.com/" target="_blank"><i className="fa fa-instagram"></i></a></li>
-                                                </ul>
-                                                <button className="wishlist-btn" onClick={() => addToWishlist(item)}>
-                                                    <i className="fa fa-heart"></i><span className="title-font">Add To WishList</span>
-                                                </button>
-                                            </div>
                                             <div className="row product-accordion">
                                                 <div className="col-sm-12">
                                                     <div className="accordion theme-accordion" id="accordionExample">
@@ -195,4 +177,4 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps, {addToCart, addToCartUnsafe, addToWishlist}) (Column);
+export default connect(mapStateToProps, {addToCart, addToCartUnsafe}) (Column);

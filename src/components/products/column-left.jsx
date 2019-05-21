@@ -9,7 +9,7 @@ import Breadcrumb from "../common/breadcrumb";
 import Details from "./common/product/details";
 import Price from "./common/product/price";
 import DetailsTopTabs from "./common/details-top-tabs";
-import {addToCart, addToCartUnsafe, addToWishlist } from '../../actions'
+import {addToCart, addToCartUnsafe } from '../../actions'
 import ImageZoom from './common/product/image-zoom'
 import SmallImages from './common/product/small-image'
 
@@ -35,7 +35,7 @@ class ColumnLeft extends Component {
     }
 
     render(){
-        const {symbol, item, addToCart, addToCartUnsafe, addToWishlist} = this.props
+        const {symbol, item, addToCart, addToCartUnsafe} = this.props
         var products = {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -82,7 +82,7 @@ class ColumnLeft extends Component {
         return (
             <div>
 
-                <Breadcrumb  title={' Product / '+item.name} />
+                <Breadcrumb  title={' Produit / '+item.name} />
 
                 {/*Section Start*/}
                 {(item)?
@@ -102,8 +102,6 @@ class ColumnLeft extends Component {
                                             )}
                                         </Slider>
                                     </div>
-
-                                    <Details item={item} addToWishlistClicked={addToWishlist} />
 
                                     <Price symbol={symbol} item={item} navOne={this.state.nav1} addToCartClicked={addToCart} BuynowClicked={addToCartUnsafe} />
                                 </div>
@@ -135,4 +133,4 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps, {addToCart, addToCartUnsafe, addToWishlist}) (ColumnLeft);
+export default connect(mapStateToProps, {addToCart, addToCartUnsafe}) (ColumnLeft);

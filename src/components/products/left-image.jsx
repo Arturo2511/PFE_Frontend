@@ -8,7 +8,7 @@ import RelatedProduct from "../common/related-product"
 import Breadcrumb from "../common/breadcrumb";
 import DetailsWithPrice from "./common/product/details-price";
 import DetailsTopTabs from "./common/details-top-tabs";
-import {addToCart, addToCartUnsafe, addToWishlist} from '../../actions'
+import {addToCart, addToCartUnsafe} from '../../actions'
 import ImageZoom from './common/product/image-zoom'
 import SmallImages from './common/product/small-image'
 
@@ -34,7 +34,7 @@ class LeftImage extends Component {
     }
 
     render(){
-        const {symbol, item, addToCart, addToCartUnsafe, addToWishlist} = this.props
+        const {symbol, item, addToCart, addToCartUnsafe} = this.props
         var products = {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -101,7 +101,7 @@ class LeftImage extends Component {
                                             )}
                                         </Slider>
                                     </div>
-                                    <DetailsWithPrice symbol={symbol} item={item} navOne={this.state.nav1} addToCartClicked={addToCart} BuynowClicked={addToCartUnsafe} addToWishlistClicked={addToWishlist} />
+                                    <DetailsWithPrice symbol={symbol} item={item} navOne={this.state.nav1} addToCartClicked={addToCart} BuynowClicked={addToCartUnsafe} />
                                 </div>
                             </div>
                         </div>
@@ -133,4 +133,4 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps, {addToCart, addToCartUnsafe, addToWishlist}) (LeftImage);
+export default connect(mapStateToProps, {addToCart, addToCartUnsafe}) (LeftImage);
