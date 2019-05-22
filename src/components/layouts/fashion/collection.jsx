@@ -3,11 +3,11 @@ import Slider from 'react-slick';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux'
 
-import {getTopCollection} from '../../../services'
+import {getNewProducts} from '../../../services'
 import {addToCart} from "../../../actions";
 import ProductItem from './product-item';
 
-class TopCollection extends Component {
+class NewProducts extends Component {
 
     render (){
         var settings = {
@@ -47,8 +47,7 @@ class TopCollection extends Component {
             <div>
                 {/*Paragraph*/}
                 <div className="title1  section-t-space">
-                    <h4>special offer</h4>
-                    <h2 className="title-inner1">top collection</h2>
+                    <h2 className="title-inner1">nouveaux produits</h2>
                 </div>
                 {/*Paragraph End*/}
                 <section className="section-b-space p-t-0">
@@ -59,7 +58,7 @@ class TopCollection extends Component {
                                     { items.map((product, index ) =>
                                         <div key={index}>
                                         <ProductItem product={product} symbol={symbol}
-                                                     onAddToCartClicked={() => addToCart(product, 1)} key={index} />
+                                                     onAddToCartClicked={() => addToCart(product)} key={index} />
                                         </div>)
                                     }
                                 </Slider>
@@ -73,8 +72,8 @@ class TopCollection extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    items: getTopCollection(state.data.products),
+    items: getNewProducts(state.data.products),
     symbol: state.data.symbol
 })
 
-export default connect(mapStateToProps, {addToCart}) (TopCollection);
+export default connect(mapStateToProps, {addToCart}) (NewProducts);

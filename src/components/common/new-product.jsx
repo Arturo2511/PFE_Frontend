@@ -23,7 +23,7 @@ class NewProduct extends Component {
                         <div key={index}>
                             {products.map((product, i) =>
                                 <div className="media" key={i}>
-                                    <Link to={`${process.env.PUBLIC_URL}/product/${product.id}`}><img className="img-fluid" src={`${product.variants[0].images}`} alt="" /></Link>
+                                    <Link to={`${process.env.PUBLIC_URL}/product/${product.id}`}><img className="img-fluid" src={`${product.picture}`} alt="" /></Link>
                                     <div className="media-body align-self-center">
                                         <Link to={`${process.env.PUBLIC_URL}/product/${product.id}`}><h6>{product.name}</h6></Link>
                                         <h4>{product.price}{symbol}</h4>

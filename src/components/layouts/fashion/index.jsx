@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 
 // Import custom components
 import HeaderOne from '../../common/headers/header-one'
-import TopCollection from './collection';
+import NewProducts from './collection';
 import SpecialProducts from "./products";
 import FooterOne from "../../common/footers/footer-one";
 
@@ -119,27 +119,7 @@ class Fashion extends Component {
                 </section>
                 {/*Home Section End*/}
 
-                <TopCollection />
-
-                {/*Parallax banner*/}
-                <section className="p-0">
-                    <div className="full-banner parallax-banner1 parallax text-center p-left">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col">
-                                    <div className="banner-contain">
-                                        <h2>2018</h2>
-                                        <h3>fashion trends</h3>
-                                        <h4>special offer</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/*Parallax banner End*/}
-
-                <SpecialProducts />
+                <NewProducts />
 
 			</div>
 			)

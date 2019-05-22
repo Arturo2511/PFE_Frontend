@@ -41,7 +41,7 @@ class cartComponent extends Component {
                                             <tr>
                                                 <td>
                                                     <Link to={`${process.env.PUBLIC_URL}/product/${item.id}`}>
-                                                        <img src={`${item.variants[0].images}`} alt="" />
+                                                        <img src={`${item.picture}`} alt="" />
                                                     </Link>
                                                 </td>
                                                 <td><Link to={`${process.env.PUBLIC_URL}/product/${item.id}`}>{item.name}</Link>
@@ -64,7 +64,7 @@ class cartComponent extends Component {
                                                         <i className="fa fa-times"></i>
                                                     </a>
                                                 </td>
-                                                <td><h2 className="td-color">{item.sum}{symbol}</h2></td>
+                                                <td><h2 className="td-color">{item.price}{symbol}</h2></td>
                                             </tr>
                                         </tbody> )
                                     })}
@@ -73,7 +73,7 @@ class cartComponent extends Component {
                                     <tfoot>
                                     <tr>
                                         <td>prix total :</td>
-                                        <td><h2>{total} {symbol}</h2></td>
+                                        <td><h2>{total}{symbol}</h2></td>
                                     </tr>
                                     </tfoot>
                                 </table>

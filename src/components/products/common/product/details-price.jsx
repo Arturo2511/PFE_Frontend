@@ -10,7 +10,6 @@ class DetailsWithPrice extends Component {
         super (props)
         this.state = {
             open:false,
-            quantity:1,
             stock: 'InStock',
             nav3: null
         }
@@ -52,7 +51,7 @@ class DetailsWithPrice extends Component {
                         <span className="instock-cls">Annulé</span>
                     </div>
                     <div className="product-buttons" >
-                        <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity)}>ajouter au panier</a>
+                        <a className="btn btn-solid" onClick={() => addToCartClicked(item)}>ajouter au panier</a>
                     </div>
                 </div>
                 <Modal open={this.state.open} onClose={this.onCloseModal} center>

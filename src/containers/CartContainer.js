@@ -18,7 +18,7 @@ const CartContainer = ({cartList, total, symbol, removeFromCart}) => (
                 <div>
             <li>
                 <div className="total">
-                    <h5>sous-total : <span>{symbol}{total}</span></h5>
+                    <h5>sous-total : <span>{total}{symbol}</span></h5>
                 </div>
             </li>
             <li>

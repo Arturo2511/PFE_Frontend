@@ -74,15 +74,16 @@ export const getVisibleproducts = (data, { brand, color, value, sortBy, startPri
 
 export const getCartTotal = cartItems => {
     var total = 0;
+    console.log(cartItems);
     for(var i=0; i<cartItems.length; i++){
-        total += parseInt(cartItems[i].qty, 10)*parseInt((cartItems[i].price*cartItems[i].discount/100), 10);
+        total += parseInt(cartItems[i].price, 10);
     }
     return total;
 }
 
 
 // Get TOP Collection
-export const getTopCollection = products => {
+export const getNewProducts = products => {
     const items = products.filter(product => {
         return product.rating > 4;
     })

@@ -31,15 +31,14 @@ export const fetchSingleProduct = productId => ({
 
 
 //it seems that I should probably use this as the basis for "Cart"
-export const addToCart = (product,qty) => (dispatch) => {
+export const addToCart = (product) => (dispatch) => {
     toast.success("Article ajouté au panier");
-        dispatch(addToCartUnsafe(product, qty))
+        dispatch(addToCartUnsafe(product))
 
 }
-export const addToCartUnsafe = (product, qty) => ({
+export const addToCartUnsafe = (product) => ({
     type: types.ADD_TO_CART,
-    product,
-    qty
+    product
 });
 export const removeFromCart = product_id => ({
     type: types.REMOVE_FROM_CART,

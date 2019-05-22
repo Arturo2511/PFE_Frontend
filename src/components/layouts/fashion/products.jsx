@@ -29,7 +29,7 @@ class SpecialProducts extends Component {
                                 <div className="no-slider row">
                                     { bestSeller.map((product, index ) =>
                                         <ProductItem product={product} symbol={symbol}
-                                                     onAddToCartClicked={() => addToCart(product, 1)} key={index} /> )
+                                                     onAddToCartClicked={() => addToCart(product)} key={index} /> )
                                     }
                                 </div>
                             </TabPanel>
@@ -37,7 +37,7 @@ class SpecialProducts extends Component {
                                 <div className="no-slider row">
                                     { mensWear.map((product, index ) =>
                                         <ProductItem product={product} symbol={symbol}
-                                                     onAddToCartClicked={() => addToCart(product, 1)} key={index} /> )
+                                                     onAddToCartClicked={() => addToCart(product)} key={index} /> )
                                     }
                                 </div>
                             </TabPanel>
@@ -45,7 +45,7 @@ class SpecialProducts extends Component {
                                 <div className=" no-slider row">
                                     { womensWear.map((product, index ) =>
                                         <ProductItem product={product} symbol={symbol}
-                                                     onAddToCartClicked={() => addToCart(product, 1)} key={index} /> )
+                                                     onAddToCartClicked={() => addToCart(product)} key={index} /> )
                                     }
                                 </div>
                             </TabPanel>

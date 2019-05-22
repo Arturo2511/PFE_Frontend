@@ -42,7 +42,7 @@ class orderSuccess extends Component {
                                     {items.map((item, index) => {
                                     return <div className="row product-order-detail" key={index}>
                                                 <div className="col-3">
-                                                    <img src={`${item.variants[0].images}`} alt="" className="img-fluid" />
+                                                    <img src={`${item.picture}`} alt="" className="img-fluid" />
                                                 </div>
                                                 <div className="col-3 order_detail">
                                                     <div>
@@ -53,20 +53,18 @@ class orderSuccess extends Component {
                                                 <div className="col-3 order_detail">
                                                     <div>
                                                         <h4>price</h4>
-                                                        <h5>{symbol}{item.sum}</h5>
+                                                        <h5>{item.price}{symbol}</h5>
                                                     </div>
                                                 </div>
                                             </div>
                                     })}
                                     <div className="total-sec">
                                         <ul>
-                                            <li>subtotal <span>{symbol}{orderTotal}</span></li>
-                                            <li>shipping <span>$0</span></li>
-                                            <li>tax(GST) <span>$0</span></li>
+                                            <li>sous-total <span>{orderTotal}{symbol}</span></li>
                                         </ul>
                                     </div>
                                     <div className="final-total">
-                                        <h3>total <span>{symbol}{orderTotal}</span></h3>
+                                        <h3>total <span>{orderTotal}{symbol}</span></h3>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +82,7 @@ class orderSuccess extends Component {
                                             <li>Order ID: {payment.id}</li> }
 
                                             <li>Order Date: {CheckDate}</li>
-                                            <li>Order Total: {symbol}{orderTotal}</li>
+                                            <li>Order Total: {orderTotal}{symbol}</li>
                                         </ul>
                                     </div>
                                     <div className="col-sm-6">
@@ -117,7 +115,7 @@ class orderSuccess extends Component {
                             <div className="error-section">
                                 <h1>404</h1>
                                 <h2>page not found</h2>
-                                <a href="index.html" className="btn btn-solid">back to home</a>
+                                <a href="/" className="btn btn-solid">retourner à l'accueil</a>
                             </div>
                         </div>
                     </div>
