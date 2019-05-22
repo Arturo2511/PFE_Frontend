@@ -119,7 +119,7 @@ class checkOut extends Component {
                                                 </div>
                                                 <div className="form-group col-md-12 col-sm-12 col-xs-12">
                                                     <div className="field-label">Pays</div>
-                                                    <select name="country" value={this.state.country} onChange={this.setStateFromInput}>
+                                                    <select name="country" value={this.state.country} onChange={this.setStateFromInput} disabled>
                                                         <option>Belgique</option>
                                                     </select>
                                                     {this.validator.message('country', this.state.country, 'required')}

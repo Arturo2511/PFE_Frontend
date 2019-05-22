@@ -4,7 +4,6 @@ import '../common/index.scss';
 import {connect} from "react-redux";
 
 // import custom Components
-import BrandBlock from "./common/brand-block";
 import NewProduct from "../common/new-product";
 import Breadcrumb from "../common/breadcrumb";
 import DetailsWithPrice from "./common/product/details-price";
@@ -15,7 +14,7 @@ import SmallImages from './common/product/small-image'
 
 
 
-class LeftSideBar extends Component {
+class SingleProduct extends Component {
 
     constructor() {
         super();
@@ -130,4 +129,4 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps, {addToCart, addToCartUnsafe}) (LeftSideBar);
+export default connect(mapStateToProps, {addToCart, addToCartUnsafe}) (SingleProduct);

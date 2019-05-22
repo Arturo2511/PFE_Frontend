@@ -45,14 +45,6 @@ export const removeFromCart = product_id => ({
     type: types.REMOVE_FROM_CART,
     product_id
 });
-export const incrementQty = (product,qty) => (dispatch) => {
-    dispatch(addToCartUnsafe(product, qty))
-
-}
-export const decrementQty = productId => ({
-    type: types.DECREMENT_QTY,
-    productId
-});
 
 // Filters
 export const filterBrand = (brand) => ({

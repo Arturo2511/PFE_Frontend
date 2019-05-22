@@ -13,7 +13,7 @@ class Login extends Component {
 
         return (
             <div>
-                <Breadcrumb title={'Login'}/>
+                <Breadcrumb title={'Connexion'}/>
                 
                 
                 {/*Login section*/}

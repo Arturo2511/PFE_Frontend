@@ -30,24 +30,6 @@ class DetailsWithPrice extends Component {
         });
     }
 
-    minusQty = () => {
-        if(this.state.quantity > 1) {
-            this.setState({stock: 'En stock'})
-            this.setState({quantity: this.state.quantity - 1})
-        }
-    }
-
-    plusQty = () => {
-        if(this.props.item.stock >= this.state.quantity) {
-            this.setState({quantity: this.state.quantity+1})
-        }else{
-            this.setState({stock: 'En rupture de stock !'})
-        }
-    }
-    changeQty = (e) => {
-        this.setState({ quantity: parseInt(e.target.value) })
-    }
-
     render (){
         const {symbol, item, addToCartClicked, BuynowClicked} = this.props
 
@@ -65,23 +47,9 @@ class DetailsWithPrice extends Component {
                     <h2> {item.name} </h2>
                     <h3>{item.price}{symbol}</h3>
                     <div className="product-description border-product">
-                        <span className="instock-cls">{this.state.stock}</span>
-                        <h6 className="product-title">quantité</h6>
-                        <div className="qty-box">
-                            <div className="input-group">
-                                  <span className="input-group-prepend">
-                                    <button type="button" className="btn quantity-left-minus" onClick={this.minusQty} data-type="minus" data-field="">
-                                     <i className="fa fa-angle-left"></i>
-                                    </button>
-                                  </span>
-                                <input type="text" name="quantity" value={this.state.quantity} onChange={this.changeQty} className="form-control input-number" />
-                                <span className="input-group-prepend">
-                                <button type="button" className="btn quantity-right-plus" onClick={this.plusQty} data-type="plus" data-field="">
-                                <i className="fa fa-angle-right"></i>
-                                </button>
-                               </span>
-                            </div>
-                        </div>
+                        <span className="instock-cls">En vente</span>
+                        <span className="instock-cls">Vendu</span>
+                        <span className="instock-cls">Annulé</span>
                     </div>
                     <div className="product-buttons" >
                         <a className="btn btn-solid" onClick={() => addToCartClicked(item, this.state.quantity)}>ajouter au panier</a>

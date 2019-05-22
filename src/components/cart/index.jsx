@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 
 import Breadcrumb from "../common/breadcrumb";
 import {getCartTotal} from "../../services";
-import {removeFromCart, incrementQty, decrementQty} from '../../actions'
+import {removeFromCart} from '../../actions'
 
 class cartComponent extends Component {
 
@@ -31,7 +31,6 @@ class cartComponent extends Component {
                                         <th scope="col">image</th>
                                         <th scope="col">article</th>
                                         <th scope="col">prix</th>
-                                        <th scope="col">quantité</th>
                                         <th scope="col">supprimer</th>
                                         <th scope="col">total</th>
                                     </tr>
@@ -41,22 +40,14 @@ class cartComponent extends Component {
                                         <tbody key={index}>
                                             <tr>
                                                 <td>
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${item.id}`}>
+                                                    <Link to={`${process.env.PUBLIC_URL}/product/${item.id}`}>
                                                         <img src={`${item.variants[0].images}`} alt="" />
                                                     </Link>
                                                 </td>
-                                                <td><Link to={`${process.env.PUBLIC_URL}/left-sidebar/product/${item.id}`}>{item.name}</Link>
+                                                <td><Link to={`${process.env.PUBLIC_URL}/product/${item.id}`}>{item.name}</Link>
                                                     <div className="mobile-cart-content row">
                                                         <div className="col-xs-3">
-                                                            <div className="qty-box">
-                                                                <div className="input-group">
-                                                                    <input type="text" name="quantity"
-                                                                           className="form-control input-number" defaultValue={item.qty} />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="col-xs-3">
-                                                            <h2 className="td-color">{symbol}{(item.price*item.discount/100)}</h2>
+                                                            <h2 className="td-color">{item.price}{symbol}</h2>
                                                         </div>
                                                         <div className="col-xs-3">
                                                             <h2 className="td-color">
@@ -67,31 +58,13 @@ class cartComponent extends Component {
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td><h2>{symbol}{(item.price*item.discount/100)}</h2></td>
-                                                <td>
-                                                    <div className="qty-box">
-                                                        <div className="input-group">
-                                                            <span className="input-group-prepend">
-                                                                <button type="button" className="btn quantity-left-minus" onClick={() => this.props.decrementQty(item.id)} data-type="minus" data-field="">
-                                                                 <i className="fa fa-angle-left"></i>
-                                                                </button>
-                                                            </span>
-                                                            <input type="text" name="quantity" value={item.qty} readOnly={true} className="form-control input-number" />
-
-                                                            <span className="input-group-prepend">
-                                                            <button className="btn quantity-right-plus" onClick={() => this.props.incrementQty(item, 1)}  data-type="plus" disabled={(item.qty >= item.stock)? true : false}>
-                                                            <i className="fa fa-angle-right"></i>
-                                                            </button>
-                                                           </span>
-                                                        </div>
-                                                    </div>{(item.qty >= item.stock)? 'out of Stock' : ''}
-                                                </td>
+                                                <td><h2>{item.price}{symbol}</h2></td>
                                                 <td>
                                                     <a href="#" className="icon" onClick={() => this.props.removeFromCart(item)}>
                                                         <i className="fa fa-times"></i>
                                                     </a>
                                                 </td>
-                                                <td><h2 className="td-color">{symbol}{item.sum}</h2></td>
+                                                <td><h2 className="td-color">{item.sum}{symbol}</h2></td>
                                             </tr>
                                         </tbody> )
                                     })}
@@ -100,7 +73,7 @@ class cartComponent extends Component {
                                     <tfoot>
                                     <tr>
                                         <td>prix total :</td>
-                                        <td><h2>{symbol} {total} </h2></td>
+                                        <td><h2>{total} {symbol}</h2></td>
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -146,5 +119,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
     mapStateToProps,
-    {removeFromCart, incrementQty, decrementQty}
+    {removeFromCart}
 )(cartComponent)

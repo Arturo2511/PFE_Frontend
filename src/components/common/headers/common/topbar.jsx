@@ -11,7 +11,7 @@ class TopBar extends Component {
                         <div className="col-lg-6">
                             <div className="header-contact">
                                 <ul>
-                                    <li><i className="fa fa-phone" aria-hidden="true"></i>Contactez-nous :  <a href="call:+32 487 37 57 97">+32 487 37 57 97</a></li>
+                                    <li><i className="fa fa-phone" aria-hidden="true"></i>Contactez-nous :  <a href="call:+32 2 718 10 10">+32 2 718 10 10</a></li>
                                 </ul>
                             </div>
                         </div>

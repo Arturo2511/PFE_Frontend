@@ -33,36 +33,6 @@ class Details extends Component {
                             </tbody>
                         </table>
                     </div>
-                    <div className="border-product">
-                        <h6 className="product-title">share it</h6>
-                        <div className="product-icon">
-                            <ul className="product-social">
-                                <li><a href="https://www.facebook.com/" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                                <li><a href="https://plus.google.com/discover" target="_blank"><i className="fa fa-google-plus"></i></a></li>
-                                <li><a href="https://twitter.com/" target="_blank"><i className="fa fa-twitter"></i></a></li>
-                                <li><a href="https://www.instagram.com/" target="_blank"><i className="fa fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="border-product">
-                        <h6 className="product-title">100% SECURE PAYMENT</h6>
-                        <div className="payment-card-bottom">
-                            <ul>
-                                <li>
-                                    <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/visa.png`} alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/mastercard.png`} alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/american-express.png`} alt="" /></a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/discover.png`} alt="" /></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         )

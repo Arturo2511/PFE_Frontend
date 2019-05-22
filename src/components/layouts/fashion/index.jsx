@@ -106,26 +106,8 @@ class Fashion extends Component {
                                         <div className="col">
                                             <div className="slider-contain">
                                                 <div>
-                                                    <h4>welcome to fashion</h4>
-                                                    <h1>men fashion</h1>
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className="home home2 text-center">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col">
-                                            <div className="slider-contain">
-                                                <div>
-                                                    <h4>welcome to fashion</h4>
-                                                    <h1>women fashion</h1>
-                                                    <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`} className="btn btn-solid">shop now</Link>
+                                                    <h4>bienvenue sur artishop</h4>
+                                                    <h1>une boutique spécialisée pour les artisans belges</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -136,41 +118,6 @@ class Fashion extends Component {
                     </Slider>
                 </section>
                 {/*Home Section End*/}
-
-                {/*collection banner*/}
-                <section className="pb-0">
-                    <div className="container">
-                        <div className="row partition2">
-                            <div className="col-md-6">
-                                <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}>
-                                    <div className="collection-banner p-right text-center">
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner1.jpg`} className="img-fluid" alt=""/>
-                                            <div className="contain-banner">
-                                                <div>
-                                                    <h4>save 30%</h4>
-                                                    <h2>men</h2>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="col-md-6">
-                                <Link to={`${process.env.PUBLIC_URL}/left-sidebar/collection`}>
-                                    <div className="collection-banner p-right text-center">
-                                        <img src={`${process.env.PUBLIC_URL}/assets/images/sub-banner2.jpg`} className="img-fluid" alt=""/>
-                                            <div className="contain-banner">
-                                                <div>
-                                                    <h4>save 60%</h4>
-                                                    <h2>women</h2>
-                                                </div>
-                                            </div>
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/*collection banner end*/}
 
                 <TopCollection />
 
@@ -193,111 +140,6 @@ class Fashion extends Component {
                 {/*Parallax banner End*/}
 
                 <SpecialProducts />
-
-                {/*service layout*/}
-                <div className="container">
-                    <section className="service border-section small-section ">
-                        <div className="row">
-                            <div className="col-md-4 service-block">
-                                <div className="media">
-                                    <div dangerouslySetInnerHTML={{ __html: svgFreeShipping }} />
-                                    <div className="media-body">
-                                        <h4>free shipping</h4>
-                                        <p>free shipping world wide</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4 service-block">
-                                <div className="media">
-                                    <div dangerouslySetInnerHTML={{ __html: svgservice }} />
-                                    <div className="media-body">
-                                        <h4>24 X 7 service</h4>
-                                        <p>online service for new customer</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4 service-block">
-                                <div className="media">
-                                    <div dangerouslySetInnerHTML={{ __html: svgoffer }} />
-                                    <div className="media-body">
-                                        <h4>festival offer</h4>
-                                        <p>new online special festival offer</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                {/*service layout end*/}
-
-                {/*logo section*/}
-                <section className="section-b-space">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-12">
-                                <Slider {...slidesix} className="slide-6 no-arrow">
-                                    <div>
-                                        <div className="logo-block">
-                                            <a href={null}>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/logos/1.png`} alt="" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="logo-block">
-                                            <a href={null}>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/logos/2.png`} alt="" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="logo-block">
-                                            <a href={null}>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/logos/3.png`} alt="" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="logo-block">
-                                            <a href={null}>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/logos/4.png`} alt="" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="logo-block">
-                                            <a href={null}>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/logos/5.png`} alt="" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="logo-block">
-                                            <a href={null}>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/logos/6.png`} alt="" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="logo-block">
-                                            <a href={null}>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/logos/7.png`} alt="" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="logo-block">
-                                            <a href={null}>
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/logos/8.png`} alt="" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </Slider>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/*logo section end*/}
 
 			</div>
 			)

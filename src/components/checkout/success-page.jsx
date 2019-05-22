@@ -52,12 +52,6 @@ class orderSuccess extends Component {
                                                 </div>
                                                 <div className="col-3 order_detail">
                                                     <div>
-                                                        <h4>quantity</h4>
-                                                        <h5>{item.qty}</h5>
-                                                    </div>
-                                                </div>
-                                                <div className="col-3 order_detail">
-                                                    <div>
                                                         <h4>price</h4>
                                                         <h5>{symbol}{item.sum}</h5>
                                                     </div>

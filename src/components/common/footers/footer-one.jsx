@@ -215,16 +215,16 @@ class FooterOne extends Component {
                                 <div className="payment-card-bottom">
                                     <ul>
                                         <li>
-                                            <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/visa.png`} alt="" /></a>
+                                            <img src={`${process.env.PUBLIC_URL}/assets/images/icon/visa.png`} alt="" />
                                         </li>
                                         <li>
-                                            <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/mastercard.png`} alt="" /></a>
+                                            <img src={`${process.env.PUBLIC_URL}/assets/images/icon/mastercard.png`} alt="" />
                                         </li>
                                         <li>
-                                            <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/american-express.png`} alt="" /></a>
+                                            <img src={`${process.env.PUBLIC_URL}/assets/images/icon/american-express.png`} alt="" />
                                         </li>
                                         <li>
-                                            <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/icon/discover.png`} alt="" /></a>
+                                            <img src={`${process.env.PUBLIC_URL}/assets/images/icon/discover.png`} alt="" />
                                         </li>
                                     </ul>
                                 </div>
