@@ -1,4 +1,3 @@
-import shop from '../api/shop'
 import * as types from '../constants/ActionTypes'
 import store from "../store";
 import { toast  } from 'react-toastify';
@@ -8,8 +7,6 @@ export const fetchProductsBegin = () => ({
     type: types.FETCH_PRODUCTS_BEGIN
 });
 
-
-
 export const receiveProducts = products => ({
     type: types.RECEIVE_PRODUCTS,
     products
@@ -17,18 +14,19 @@ export const receiveProducts = products => ({
 
 export const getAllProducts = () => dispatch => {
     dispatch(fetchProductsBegin());
-    shop.getProducts(products => {
-        dispatch(receiveProducts(products));
-        return products;
-    })
+    fetch('http://localhost:3030/article/')
+          .then(res => {
+              return res.json()
+           })
+          .then(products => { 
+                dispatch(receiveProducts(products));
+                return products;
+           });
 }
 export const fetchSingleProduct = productId => ({
     type: types.FETCH_SINGLE_PRODUCT,
     productId
 })
-
-
-
 
 //it seems that I should probably use this as the basis for "Cart"
 export const addToCart = (product) => (dispatch) => {

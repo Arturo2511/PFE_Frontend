@@ -36,8 +36,8 @@ class ProductItem extends Component {
                             {(product.new == true)? <span className="lable3">new</span> : ''}
                         </div>
                         <div className="front">
-                            <Link to={`${process.env.PUBLIC_URL}/product/${product.id}`} ><img
-                                src={`${this.state.image?this.state.image:product.variants[0].images}`}
+                            <Link to={`${process.env.PUBLIC_URL}/product/${product.id_product}`} ><img
+                                src={`${this.state.image?this.state.image:product.picture}`}
                                 className="img-fluid"
                                 alt="" /></Link>
                         </div>
@@ -53,7 +53,7 @@ class ProductItem extends Component {
                     </div>
                     <div className="product-detail">
                         <div>
-                            <Link to={`${process.env.PUBLIC_URL}/product/${product.id}`}>
+                            <Link to={`${process.env.PUBLIC_URL}/product/${product.id_product}`}>
                                 <h6>{product.name}</h6>
                             </Link>
                             <h4>{product.price}{symbol}
