@@ -64,7 +64,7 @@ class SingleProduct extends Component {
             return (
             <div>
 
-                <Breadcrumb  title={'Product / '+item.name} />
+                <Breadcrumb  title={'Produit / '+ item.name} />
 
                 {/*Section Start*/}
                 {(item)?
@@ -97,14 +97,7 @@ class SingleProduct extends Component {
                                         </div>
                                         <div className="row">
                                             <div className="col-lg-6 product-thumbnail">
-                                                <Slider {...products} asNavFor={this.state.nav2} ref={slider => (this.slider1 = slider)} className="product-slick">
-                                                    {item.variants.map((vari, index) =>
-                                                       <div key={index}>
-                                                           <ImageZoom image={vari.images} />
-                                                       </div>
-                                                    )}
-                                                </Slider>
-                                                <SmallImages item={item} settings={productsnav} navOne={this.state.nav1} />
+                                                <ImageZoom image={item.picture} />
                                             </div>
                                             <DetailsWithPrice symbol={symbol} item={item} navOne={this.state.nav1} addToCartClicked={addToCart} BuynowClicked={addToCartUnsafe} />
                                         </div>
@@ -124,7 +117,7 @@ class SingleProduct extends Component {
 const mapStateToProps = (state, ownProps) => {
     let productId = ownProps.match.params.id;
     return {
-        item: state.data.products.find(el => el.id == productId),
+        item: state.data.products.find(el => el.id_product == productId),
         symbol: state.data.symbol
     }
 }

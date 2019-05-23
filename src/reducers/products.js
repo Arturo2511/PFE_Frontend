@@ -15,7 +15,7 @@ const productReducer = (state = initialState, action) => {
             return { ...state,
                 products: action.products };
         case FETCH_SINGLE_PRODUCT:
-            if (state.products.findIndex(product => product.id === action.productId) !== -1) {
+            if (state.products.findIndex(product => product.id_product === action.productId) !== -1) {
                 const singleItem = state.products.reduce((itemAcc, product) => {
                     return product
                 }, [])

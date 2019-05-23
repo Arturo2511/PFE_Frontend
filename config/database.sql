@@ -32,7 +32,7 @@ CREATE TABLE pfe.products (
   description VARCHAR(255) NOT NULL,
   state VARCHAR(255) NOT NULL,
   price VARCHAR(255) NOT NULL,
-  date TIMESTAMPTZ DEFAULT Now(),
+  date TIMESTAMP DEFAULT Now(),
   FOREIGN KEY (id_seller) REFERENCES pfe.users(id_user),
   FOREIGN KEY (id_category) REFERENCES pfe.categories(id_category)
 );
@@ -41,7 +41,7 @@ CREATE TABLE pfe.sales (
   id_sale SERIAL PRIMARY KEY,
   id_product INTEGER NOT NULL,
   id_buyer INTEGER NOT NULL,
-  sale_date TIMESTAMPTZ DEFAULT Now(),
+  sale_date TIMESTAMP DEFAULT Now(),
   id_stripe VARCHAR(255) NOT NULL,
   FOREIGN KEY (id_product) REFERENCES pfe.products(id_product),
   FOREIGN KEY (id_buyer) REFERENCES pfe.users(id_user)
@@ -57,7 +57,7 @@ INSERT INTO pfe.categories (picture, name) VALUES ('null', 'cat3');
 INSERT INTO pfe.categories (picture, name) VALUES ('null', 'cat4');
 INSERT INTO pfe.categories (picture, name) VALUES ('null', 'cat5');
 
-INSERT INTO pfe.products (id_seller, id_category, picture, name, description, state, price) VALUES (1, 1, 'null', 'produit1', 'description1', 'en vente', '100');
-INSERT INTO pfe.products (id_seller, id_category, picture, name, description, state, price) VALUES (2, 2, 'null', 'produit2', 'description2', 'en vente', '101');
-INSERT INTO pfe.products (id_seller, id_category, picture, name, description, state, price) VALUES (3, 1, 'null', 'produit3', 'description3', 'en vente', '102');
-INSERT INTO pfe.products (id_seller, id_category, picture, name, description, state, price) VALUES (1, 2, 'null', 'produit4', 'description4', 'en vente', '103');
+INSERT INTO pfe.products (id_seller, id_category, picture, name, description, state, price) VALUES (1, 1, '/assets/images/fashion/product/15.jpg', 'produit1', 'description1', 'en vente', '100');
+INSERT INTO pfe.products (id_seller, id_category, picture, name, description, state, price) VALUES (2, 2, '/assets/images/fashion/product/15.jpg', 'produit2', 'description2', 'en vente', '101');
+INSERT INTO pfe.products (id_seller, id_category, picture, name, description, state, price) VALUES (3, 1, '/assets/images/fashion/product/15.jpg', 'produit3', 'description3', 'en vente', '102');
+INSERT INTO pfe.products (id_seller, id_category, picture, name, description, state, price) VALUES (1, 2, '/assets/images/fashion/product/15.jpg', 'produit4', 'description4', 'en vente', '103');

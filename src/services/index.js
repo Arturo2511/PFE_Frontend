@@ -74,7 +74,6 @@ export const getVisibleproducts = (data, { brand, color, value, sortBy, startPri
 
 export const getCartTotal = cartItems => {
     var total = 0;
-    console.log(cartItems);
     for(var i=0; i<cartItems.length; i++){
         total += parseInt(cartItems[i].price, 10);
     }
@@ -82,38 +81,11 @@ export const getCartTotal = cartItems => {
 }
 
 
-// Get TOP Collection
+// Get New Products
 export const getNewProducts = products => {
     const items = products.filter(product => {
-        return product.rating > 4;
+        return true;
     })
-    return items.slice(0,8)
-}
-
-// Get Best Seller
-export const getBestSeller = products => {
-    const items = products.filter(product => {
-        return product.sale === true;
-    })
-
-    return items.slice(0,8)
-}
-
-// Get Mens Wear
-export const getMensWear = products => {
-    const items = products.filter(product => {
-        return product.category === 'men';
-    })
-
-    return items.slice(0,8)
-}
-
-// Get Womens Wear
-export const getWomensWear = products => {
-    const items = products.filter(product => {
-        return product.category === 'women';
-    })
-
     return items.slice(0,8)
 }
 

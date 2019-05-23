@@ -12,8 +12,7 @@ export default function cartReducer(state = {
             if (state.cart.findIndex(product => product.id === productId) !== -1) {
                 const cart = state.cart.reduce((cartAcc, product) => {
                     if (product.id === productId) {
-                        //console.log('price: '+product.price+'Qty: '+product.qty)
-                        cartAcc.push({ ...product, sum: product.price }) // Increment qty
+                        cartAcc.push({ ...product, sum: product.price })
                     } else {
                         cartAcc.push(product)
                     }
@@ -24,7 +23,7 @@ export default function cartReducer(state = {
                 return { ...state, cart }
             }
 
-            return { ...state, cart: [...state.cart, { ...action.product, qty: action.qty, sum: action.product.price }] }
+            return { ...state, cart: [...state.cart, { ...action.product, sum: action.product.price }] }
 
 
         case REMOVE_FROM_CART:
