@@ -9,9 +9,10 @@ export default function cartReducer(state = {
     switch (action.type) {
         case ADD_TO_CART:
             const productId = action.product.id
-            if (state.cart.findIndex(product => product.id === productId) !== -1) {
+            if (state.cart.findIndex(product => product.id_product === productId) !== -1) {
                 const cart = state.cart.reduce((cartAcc, product) => {
-                    if (product.id === productId) {
+                    if (product.id_product === productId) {
+                        //il y a un probleme ici
                         cartAcc.push({ ...product, sum: product.price })
                     } else {
                         cartAcc.push(product)

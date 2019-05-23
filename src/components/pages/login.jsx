@@ -22,7 +22,7 @@ class Login extends Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        fetch('/api/login', {
+        fetch('http://localhost:3030/user/login/', {
           method: 'POST',
           body: JSON.stringify(this.state),
           headers: {
@@ -39,7 +39,7 @@ class Login extends Component {
         })
         .catch(err => {
           console.error(err);
-          alert('Erreur de connexion, veuillez réessayer');
+          alert("Email ou mot de passe incorrect");
         });
     }
 

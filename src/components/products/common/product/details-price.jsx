@@ -45,6 +45,7 @@ class DetailsWithPrice extends Component {
                 <div className="product-right">
                     <h2> {item.name} </h2>
                     <h3>{item.price}{symbol}</h3>
+                    <h4>Vendu par : {item.pseudo} </h4>
                     <div className="product-description border-product">
                         <span className="instock-cls">En vente</span>
                         <span className="instock-cls">Vendu</span>
@@ -54,18 +55,6 @@ class DetailsWithPrice extends Component {
                         <a className="btn btn-solid" onClick={() => addToCartClicked(item)}>ajouter au panier</a>
                     </div>
                 </div>
-                <Modal open={this.state.open} onClose={this.onCloseModal} center>
-                    <div className="modal-dialog modal-dialog-centered" role="document">
-                        <div className="modal-content">
-                            <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalLabel">Sheer Straight Kurta</h5>
-                            </div>
-                            <div className="modal-body">
-                                <img src={`${process.env.PUBLIC_URL}/assets/images/size-chart.jpg`} alt="" className="img-fluid" />
-                            </div>
-                        </div>
-                    </div>
-                </Modal>
             </div>
         )
     }

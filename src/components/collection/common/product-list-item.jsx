@@ -36,8 +36,8 @@ class ProductListItem extends Component {
                     <div className="product-box">
                         <div className="img-wrapper">
                             <div className="front">
-                                <Link to={`${process.env.PUBLIC_URL}/product/${product.id}`} ><img
-                                    src={this.state.picture}
+                                <Link to={`${process.env.PUBLIC_URL}/product/${product.id_product}`} ><img
+                                    src={this.state.image}
                                     className="img-fluid"
                                     alt="" /></Link>
                             </div>
@@ -74,21 +74,16 @@ class ProductListItem extends Component {
                                         <div className="row">
                                             <div className="col-lg-6  col-xs-12">
                                                 <div className="quick-view-img">
-                                                    <img src={`${this.state.image?this.state.image:product.variants[0].images}`} alt="" className="img-fluid" />
+                                                    <img src={`${this.state.image?this.state.image:product.picture}`} alt="" className="img-fluid" />
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 rtl-text">
                                                 <div className="product-right">
                                                     <h2> {product.name} </h2>
                                                     <h3>{product.price}{symbol}</h3>
-                                                    <ul className="color-variant">
-                                                        {product.variants.map((vari, i) =>
-                                                            <li className={vari.color} key={i} title={vari.color} onClick={() => this.onClickHandle(vari.images)}></li>)
-                                                        }
-                                                    </ul>
                                                     <div className="border-product">
                                                         <h6 className="product-title">description</h6>
-                                                        <p>{product.shortDetails}</p>
+                                                        <p>{product.description}</p>
                                                     </div>
                                                     <div className="product-description border-product">
                                                         <div className="size-box">

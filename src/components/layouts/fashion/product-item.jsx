@@ -76,11 +76,11 @@ class ProductItem extends Component {
                                                 <h3>{product.price}{symbol}</h3>
                                                 <div className="border-product">
                                                     <h6 className="product-title">description</h6>
-                                                    <p>{product.shortDetails}</p>
+                                                    <p>{product.description}</p>
                                                 </div>
                                                 <div className="product-buttons">
                                                     <button  className="btn btn-solid" onClick={() => onAddToCartClicked(product)} >ajouter au panier</button>
-                                                    <Link to={`${process.env.PUBLIC_URL}/product/${product.id}`} className="btn btn-solid">en savoir plus</Link>
+                                                    <Link to={`${process.env.PUBLIC_URL}/product/${product.id_product}`} className="btn btn-solid">en savoir plus</Link>
                                                 </div>
                                             </div>
                                         </div>

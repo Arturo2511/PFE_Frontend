@@ -47,9 +47,9 @@ CREATE TABLE pfe.sales (
   FOREIGN KEY (id_buyer) REFERENCES pfe.users(id_user)
 );
 
-INSERT INTO pfe.users (pseudo, firstname, lastname, password, address, number, zip_code, city, country, email, phone, description) VALUES ('jholodi16','Jérémy','Holodiline','mdpjeremy','Rue Random', '42', '1000', 'Bruxelles', 'Belgium', 'jeremy.holodiline@student.vinci.be','0439098765', 'je suis un geek');
-INSERT INTO pfe.users (pseudo, firstname, lastname, password, address, number, zip_code, city, country, email, phone, description) VALUES ('mmisson16','Malo','Misson','mdpmalo','Rue Truc', '24', '1000', 'Bruxelles', 'Belgium', 'malo.misson@student.vinci.be','0427638522','je suis egalement un geek');
-INSERT INTO pfe.users (pseudo, firstname, lastname, password, address, number, zip_code, city, country, email, phone, description) VALUES ('amozzon16','Arturo','Mozzon','mdparturo','Rue Machin', '93', '1000', 'Bruxelles', 'Belgium', 'arturo.mozzon@student.vinci.be','0456286305','je suis effectivement egalement un geek');
+INSERT INTO pfe.users (pseudo, firstname, lastname, password, address, number, zip_code, city, country, email, phone, description) VALUES ('jholodi16','Jérémy','$2b$10$1zl0IxE9Jj2S5MLYvQjBpOudXUjpsin6ghQG69.9H2kGE36uD11ea','mdpjeremy','Rue Random', '42', '1000', 'Bruxelles', 'Belgium', 'jeremy.holodiline@student.vinci.be','0439098765', 'je suis un geek');
+INSERT INTO pfe.users (pseudo, firstname, lastname, password, address, number, zip_code, city, country, email, phone, description) VALUES ('mmisson16','Malo','Misson','$2b$10$1zl0IxE9Jj2S5MLYvQjBpOudXUjpsin6ghQG69.9H2kGE36uD11ea','Rue Truc', '24', '1000', 'Bruxelles', 'Belgium', 'malo.misson@student.vinci.be','0427638522','je suis egalement un geek');
+INSERT INTO pfe.users (pseudo, firstname, lastname, password, address, number, zip_code, city, country, email, phone, description) VALUES ('amozzon16','Arturo','Mozzon','$2b$10$1zl0IxE9Jj2S5MLYvQjBpOudXUjpsin6ghQG69.9H2kGE36uD11ea','Rue Machin', '93', '1000', 'Bruxelles', 'Belgium', 'arturo.mozzon@student.vinci.be','0456286305','je suis effectivement egalement un geek');
 
 INSERT INTO pfe.categories (picture, name) VALUES ('null', 'cat1');
 INSERT INTO pfe.categories (picture, name) VALUES ('null', 'cat2');
