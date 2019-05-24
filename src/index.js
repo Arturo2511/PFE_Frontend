@@ -26,6 +26,7 @@ import orderSuccess from './components/checkout/success-page'
 import aboutUs from './components/pages/about-us'
 import PageNotFound from './components/pages/404'
 import Login from './components/pages/login'
+import Logout from './components/pages/logout'
 import Register from './components/pages/register'
 import Search from './components/pages/search'
 import Collection from './components/pages/collection'
@@ -61,6 +62,7 @@ class Root extends React.Component {
                                 <Route path={`${process.env.PUBLIC_URL}/pages/about-us`} component={aboutUs}/>
                                 <Route path={`${process.env.PUBLIC_URL}/pages/404`} component={PageNotFound}/>
                                 <Route path={`${process.env.PUBLIC_URL}/pages/login`} component={Login}/>
+                                <Route path={`${process.env.PUBLIC_URL}/pages/logout`} component={Logout}/>
                                 <Route path={`${process.env.PUBLIC_URL}/pages/register`} component={Register}/>
                                 <Route path={`${process.env.PUBLIC_URL}/pages/search`} component={Search}/>
                                 <Route path={`${process.env.PUBLIC_URL}/pages/collection`} component={Collection}/>

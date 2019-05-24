@@ -46,11 +46,6 @@ class DetailsWithPrice extends Component {
                     <h2> {item.name} </h2>
                     <h3>{item.price}{symbol}</h3>
                     <h4>Vendu par : {item.pseudo} </h4>
-                    <div className="product-description border-product">
-                        <span className="instock-cls">En vente</span>
-                        <span className="instock-cls">Vendu</span>
-                        <span className="instock-cls">Annulé</span>
-                    </div>
                     <div className="product-buttons" >
                         <a className="btn btn-solid" onClick={() => addToCartClicked(item)}>ajouter au panier</a>
                     </div>

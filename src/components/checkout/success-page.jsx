@@ -13,7 +13,7 @@ class orderSuccess extends Component {
         const {payment, items, symbol, orderTotal} = this.props.location.state;
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         var current = new Date();
-        let CheckDate = current.toLocaleDateString("en-US", options).toString()
+        let CheckDate = current.toLocaleDateString("fr-FR", options).toString()
 
         return (
             (payment)?
@@ -24,9 +24,9 @@ class orderSuccess extends Component {
                             <div className="col-md-12">
                                 <div className="success-text">
                                     <i className="fa fa-check-circle" aria-hidden="true"></i>
-                                    <h2>thank you</h2>
-                                    <p>Payment Is Has Been Received Order Placed Successfully</p>
-                                    <p>Transaction ID: {(payment.paymentID)?payment.paymentID:payment.id}</p>
+                                    <h2>merci</h2>
+                                    <p>votre paiement a été reçu avec succès</p>
+                                    <p>ID de la transaction: {(payment.paymentID)?payment.paymentID:payment.id}</p>
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@ class orderSuccess extends Component {
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="product-order">
-                                    <h3>your order details</h3>
+                                    <h3>détail de votre commande</h3>
                                     {items.map((item, index) => {
                                     return <div className="row product-order-detail" key={index}>
                                                 <div className="col-3">
@@ -46,13 +46,13 @@ class orderSuccess extends Component {
                                                 </div>
                                                 <div className="col-3 order_detail">
                                                     <div>
-                                                        <h4>product name</h4>
+                                                        <h4>produit</h4>
                                                         <h5>{item.name}</h5>
                                                     </div>
                                                 </div>
                                                 <div className="col-3 order_detail">
                                                     <div>
-                                                        <h4>price</h4>
+                                                        <h4>prix</h4>
                                                         <h5>{item.price}{symbol}</h5>
                                                     </div>
                                                 </div>
@@ -70,35 +70,18 @@ class orderSuccess extends Component {
                             </div>
                             <div className="col-lg-6">
                                 <div className="row order-success-sec">
-                                    <div className="col-sm-6">
-                                        <h4>summery</h4>
+                                    <div className="col-sm-12">
+                                        <h4>Résumé</h4>
                                         <ul className="order-detail">
-                                            {(payment.paymentID)?
-                                                <div>
-                                            <li>payer ID: {payment.payerID}</li>
-                                            <li>payment ID: {payment.paymentID}</li>
-                                            <li>payment Token: {payment.paymentToken}</li></div>
-                                                :
-                                            <li>Order ID: {payment.id}</li> }
-
-                                            <li>Order Date: {CheckDate}</li>
-                                            <li>Order Total: {orderTotal}{symbol}</li>
-                                        </ul>
-                                    </div>
-                                    <div className="col-sm-6">
-                                        <h4>shipping address</h4>
-                                        <ul className="order-detail">
-                                            <li>gerg harvell</li>
-                                            <li>568, suite ave.</li>
-                                            <li>Austrlia, 235153</li>
-                                            <li>Contact No. 987456321</li>
+                                            <li>Order ID: {payment.id}</li>
+                                            <li>Date de la commande: {CheckDate}</li>
+                                            <li>Total de la commande: {orderTotal}{symbol}</li>
                                         </ul>
                                     </div>
 
                                     <div className="col-sm-12 payment-mode">
-                                        <h4>payment method</h4>
-                                        <p>Pay on Delivery (Cash/Card). Cash on delivery (COD) available. Card/Net
-                                            banking acceptance subject to device availability.</p>
+                                        <h4>méthode de paiement</h4>
+                                        <p>Carte de débit/crédit</p>
                                     </div>
                                 </div>
                             </div>

@@ -32,10 +32,10 @@ class Register extends Component {
     }
 
     onSubmit = (event) => {
+        event.preventDefault();
         if(this.state.password === this.state.password2) {
-            event.preventDefault();
             fetch('http://localhost:3030/user/', {
-            method: 'POST',
+            method: 'PUT',
             body: JSON.stringify(this.state),
             headers: {
                 'Content-Type': 'application/json'
@@ -50,8 +50,7 @@ class Register extends Component {
             }
             })
             .catch(err => {
-            console.error(err);
-            alert('Erreur de connexion, veuillez réessayer');
+                alert('Pseudo/Email deja utilisé');
             });
         } else {
             alert("Les mots de passe ne correspondent pas")
@@ -71,7 +70,7 @@ class Register extends Component {
                             <div className="col-lg-12">
                                 <h3>Creer un compte</h3>
                                 <div className="theme-card">
-                                    <form className="theme-form">
+                                    <form className="theme-form" onSubmit={this.onSubmit}>
                                         <div className="form-row">
                                             <div className="col-md-12">
                                                 <label htmlFor="pseudo">Pseudo</label>
@@ -101,8 +100,8 @@ class Register extends Component {
                                                        placeholder="Numéro" value={this.state.number} onChange={this.handleChange} />
                                             </div>
                                             <div className="col-md-3">
-                                                <label htmlFor="zip">Code Postal</label>
-                                                <input type="text" className="form-control" id="zip"
+                                                <label htmlFor="zip_code">Code Postal</label>
+                                                <input type="text" className="form-control" id="zip_code"
                                                        placeholder="Code Postal" value={this.state.zip_code} onChange={this.handleChange} />
                                             </div>
                                             <div className="col-md-9">

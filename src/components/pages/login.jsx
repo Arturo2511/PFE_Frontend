@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 
 import Breadcrumb from "../common/breadcrumb";
 
@@ -31,14 +31,22 @@ class Login extends Component {
         })
         .then(res => {
           if (res.status === 200) {
-            this.props.history.push('/');
+            return res.json();
           } else {
             const error = new Error(res.error);
             throw error;
           }
         })
+        .then(user => {
+            try {
+                const serializedState = JSON.stringify(user);
+                localStorage.setItem('user', serializedState);
+            }catch(e){
+                console.log(e);
+            }
+            this.props.history.push('/');
+        })
         .catch(err => {
-          console.error(err);
           alert("Email ou mot de passe incorrect");
         });
     }
